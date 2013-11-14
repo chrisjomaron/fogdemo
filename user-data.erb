@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e -x
+
+yum install --disableplugin=priorities -y httpd
+
+cat << EOF >> /var/www/html/index.html
+<html>
+<head>
+</head>
+<body>
+Hello! I am a <%= environment %> server,  `uname -a`
+</body>
+</html>
+EOF
+
+service httpd start
