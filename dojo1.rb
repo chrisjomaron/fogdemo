@@ -89,7 +89,7 @@ user_data = ERB.new(user_data).result(binding)
 puts user_data
 
 puts 'Creating server'
-server = compute.servers.create( :image_id => @image_id_sa_east_1,
+server = compute.servers.create( :image_id => @image_id_us_west_2,
                                  :flavor_id =>  'm1.small',
                                  :groups => security_group_name,
                                  :user_data => user_data,

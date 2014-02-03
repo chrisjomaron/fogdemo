@@ -2,6 +2,9 @@
 set -e -x
 
 yum install --disableplugin=priorities -y httpd
+#yum install -y ruby19 git wget curl vim ruby19-devel make gcc nginx
+#gem install bundler
+#ssh-keygen
 
 cat << EOF >> /var/www/html/index.html
 <html>
